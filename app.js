@@ -2,9 +2,19 @@ const h = document.getElementById("h");
 const m = document.getElementById("m");
 
 h.addEventListener("click", function() {
-  if (m.classList.contains("active")) {
-    m.classList.remove("active");
+  if (m.style.display === "block") {
+    m.style.display = "none";
   } else {
-    m.classList.add("active");
+    m.style.display = "block";
   }
+  //   if (m.classList.contains("active")) {
+  //     m.classList.remove("active");
+  //   } else {
+  //     m.classList.add("active");
+  //   }
 });
+
+// function myFunction() {
+//     const x = document.getElementById("myLinks");
+
+//   }
