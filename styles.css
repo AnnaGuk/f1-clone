@@ -161,8 +161,8 @@
 }
 
 .news__box .main__news {
-  border-top: solid 10px red;
-  border-right: solid 10px red;
+  border-top: solid 8px red;
+  border-right: solid 8px red;
   border-top-right-radius: 25px;
   box-sizing: border-box;
 }
@@ -241,4 +241,95 @@
     display: flex;
     flex-direction: column;
   }
+}
+
+.slider {
+  border: 1px dotted grey;
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider .slider-view {
+  position: relative;
+}
+
+.slider .slider-nav {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  top: calc(50% - 25px);
+}
+
+.slider .slider-nav .nav-bttn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 10px;
+  overflow: hidden;
+  text-indent: -99999px;
+  white-space: wrap;
+  cursor: pointer;
+  background-color: grey;
+  border-color: white;
+  transition: all 400ms;
+  position: relative;
+}
+
+.slider .slider-nav .nav-bttn:hover {
+  opacity: 0.5;
+  width: 34px;
+  height: 34px;
+}
+.slider .slider-nav .nav-prev:after {
+  content: "<";
+  position: absolute;
+  z-index: 20;
+  display: block;
+  top: calc(50% - 12px);
+  left: calc(50% - 5px);
+  font-size: 20px;
+  color: black;
+  text-indent: 0;
+}
+
+.slider .slider-nav .nav-next:after {
+  content: ">";
+  position: absolute;
+  z-index: 20;
+  display: block;
+  top: calc(50% - 12px);
+  left: calc(50% - 5px);
+  font-size: 20px;
+  color: black;
+  text-indent: 0;
+}
+
+.slider .slide {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  border: 1px dotted grey;
+  position: relative;
+  top: 0;
+  background: rgb(41, 40, 40);
+  color: white;
+  display: none;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: left 400ms;
+}
+
+.slider .slide:first-child {
+  z-index: 10;
+  display: block;
+}
+
+.slider .slide .slide-img {
+  max-height: 30px;
 }
