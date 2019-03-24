@@ -1,27 +1,17 @@
-const h = document.getElementById("h");
-const m = document.getElementById("m");
+const hmbg = document.getElementById("hamburger");
+const mob = document.getElementById("mobile");
 const slides = document.querySelectorAll("#sliderView .slide");
 const navs = document.querySelectorAll("#sliderNav .nav-bttn");
 
 const sliderView = document.querySelector("#sliderView");
 
-h.addEventListener("click", function() {
-  if (m.style.display === "block") {
-    m.style.display = "none";
+hmbg.addEventListener("click", function() {
+  if (mob.style.display === "block") {
+    mob.style.display = "none";
   } else {
-    m.style.display = "block";
+    mob.style.display = "block";
   }
-  //   if (m.classList.contains("active")) {
-  //     m.classList.remove("active");
-  //   } else {
-  //     m.classList.add("active");
-  //   }
 });
-
-// function myFunction() {
-//     const x = document.getElementById("myLinks");
-
-//   }
 
 const viewPortWidth = sliderView.offsetWidth;
 const viewPortHeight = sliderView.offsetHeight;
